@@ -1,4 +1,4 @@
-# Project 1/Part 1 - Aloha Homepage
+# Project 1 Part 1 - Aloha Homepage
 
 ## Summary
 
