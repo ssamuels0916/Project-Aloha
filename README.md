@@ -1,4 +1,4 @@
-# Project 1/Part 1 - Aloha Homepage
+# Project 1 - Aloha Apparel
 
 ## Summary
 
@@ -6,9 +6,12 @@ For our first project at Red Academy we built the homepage of an e-commerce webs
 
 ## Languages and Tools Used
 	* HTML
-	* CSS (including CSS reset styles, floats, and media queries)
+	* CSS (including CSS reset styles, flexbox, and media queries)
+	*jQuery (smooth scrolling, bxSlider, DOM navigation, alert-box display)
 	* Git and Github 
+	*Mobile first approach to coding & design(RWD)
+	
 
 ## What did I learn?
 
-During this project I learned and honed both my HTML and CSS skills, in addition to learning how to command my terminal, use git, as well as Github. Though floats and media queries proved to be a bit challenging at first, I can say now with confidence that I have greatly strengthened my HTML and CSS skills. 
+For this project I was able to learn and hone my HTML, CSS, and jQuery skills. Though at first using these mark-ups and languages proved to be a bit challenging, with time and plenty of practice I was able to improve upon what I've learned, to the point where I am able to say that I am very confident in my skills with these languages. 

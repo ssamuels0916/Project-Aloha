@@ -10,7 +10,7 @@
          url('assets/fonts/playfairdisplay-bold-webfont.woff') format('woff'),
          url('assets/fonts/playfairdisplay-bold-webfont.ttf') format('truetype'),
          url('assets/fonts/playfairdisplay-bold-webfont.svg#playfair_displaybold') format('svg');
-    font-weight: normal;
+    font-weight: bold;
     font-style: normal;
 
 }
@@ -27,7 +27,7 @@
          url('assets/fonts/playfairdisplay-bolditalic-webfont.ttf') format('truetype'),
          url('assets/fonts/playfairdisplay-bolditalic-webfont.svg#playfair_displaybold_italic') format('svg');
     font-weight: normal;
-    font-style: normal;
+    font-style: italic;
 
 }
 
@@ -43,7 +43,7 @@
          url('assets/fonts/playfairdisplay-italic-webfont.ttf') format('truetype'),
          url('assets/fonts/playfairdisplay-italic-webfont.svg#playfair_displayitalic') format('svg');
     font-weight: normal;
-    font-style: normal;
+    font-style: italic;
 
 }
 
@@ -91,7 +91,7 @@
          url('assets/fonts/raleway-lightitalic-webfont.ttf') format('truetype'),
          url('assets/fonts/raleway-lightitalic-webfont.svg#ralewaylight_italic') format('svg');
     font-weight: normal;
-    font-style: normal;
+    font-style: italic;
 
 }
 
@@ -106,7 +106,7 @@
          url('assets/fonts/raleway-medium-webfont.woff') format('woff'),
          url('assets/fonts/raleway-medium-webfont.ttf') format('truetype'),
          url('assets/fonts/raleway-medium-webfont.svg#ralewaymedium') format('svg');
-    font-weight: normal;
+    font-weight: bold;
     font-style: normal;
 
 }
@@ -123,23 +123,18 @@
          url('assets/fonts/raleway-mediumitalic-webfont.ttf') format('truetype'),
          url('assets/fonts/raleway-mediumitalic-webfont.svg#ralewaymedium_italic') format('svg');
     font-weight: normal;
-    font-style: normal;
+    font-style: italic;
 
 }
 
 
 /*-----------------------------------END OF FONTS---------------------------------*/
+/*-----------------------mobile first-----------------*/
 
 body {
-	color:#2d2d2d;
-    max-width:1240px;
-	font-size:16px;
-	line-height: 2;
-}
-
-header {
-	padding-bottom:.5rem;
-    height:6rem;
+    color:#2d2d2d;
+    font-size:16px;
+    line-height: 2;
 }
 
 img {
@@ -148,46 +143,78 @@ img {
 }
 
 section {
-	max-height:200rem;
-	overflow:hidden;
-	clear:both;
+    max-height:200rem;
+    overflow:hidden;
+    clear:both;
 }
 /*----------------header----------------*/
+header {
+    padding-bottom:.5rem;
+    height:9rem;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align:center;
+        -ms-flex-align:center;
+            align-items:center;
+    -ms-flex-flow:row wrap;
+        flex-flow:row wrap;
+}
+.navBar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    color: #e2574c;
+    font-family: 'ralewaymedium', sans-serif;
+    text-transform: uppercase;
+    border-top: 1px solid #d7d7d7;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+}
+.navBar a {
+    text-decoration: none;
+    color: #e2574c;
+}
+
 .logo {
-    float: left;
-    max-width: 160px;
-    padding-left: 2rem;
+    max-width: 8rem;
+    padding-left: .5rem;
     margin-top: 16px;
 }
 
 .cart {
-	float:right;
-	width:62px;
-	padding-right:15px;
-	margin-top: 15px;
+    width: 3rem;
+    padding-right:.5rem;
+    margin-top: 15px;
 }
 
 /*----------------heroImageBanner----------------*/
 
 .heroImageBanner {
- 	background: linear-gradient(to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.25) 100% ),
- 				url("assets/images/banner-girl.png") no-repeat center 60px,
- 				url("assets/images/flower-bkgd.jpg");
- 	height: 350px;
- 	background-size: contain, contain,contain;
- 	color: white;
- 	position: relative;
- 	clear:both;
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.25) 100% ), url(assets/images/banner-girl.png) no-repeat center 60px, url(assets/images/flower-bkgd.jpg)repeat-x center center;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.25) 100% ), url(assets/images/banner-girl.png) no-repeat center 60px, url(assets/images/flower-bkgd.jpg)repeat-x center center;
+    height: 400px;
+    background-size: auto 100%;
+    position: relative;
 }
-
 .bannerText {
-	color: white;
+    color: white;
     left: 50%;
     line-height: 1;
     position: absolute;
     text-align: center;
     top: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     width: 80%;
     font-size: 2rem;
 }
@@ -195,61 +222,56 @@ section {
 .collection {
     font-size: 1rem;
     margin-bottom: 1.5rem;
-    font-family: 'ralewaymedium';
+    font-family: 'ralewaymedium',sans-serif;
     text-shadow: 2px 2px 6px #000;
 }
 
 .season {
-	font-family: 'playfair_displayregular';
+    font-family: 'playfair_displayregular';
     font-size: 2.8rem;
     text-shadow: 2px 2px 6px #000;
 }
 
 /*----------------aboutSection----------------*/
 
-.about{
-    text-align: center;
-    margin-bottom: 3rem;
-    margin-top: 3rem;
-    font-size: 1.3rem;
-    max-width: 78rem;
-    max-height: 11rem;
-}
-
-.about p {
-	display: inline-block;
-    height: 6rem;
-    width: 35rem;
-    font-size: 1rem;
-}
-
-.about h2 {
-	height: 5rem;
-    width: 40rem;
-    display: inline-block;
-}
-.aboutAloha {
-    font-size: 1.25rem;
-    font-family:'ralewaylight';
-
-}
-section h2{
-	text-align:center;
+.aboutText {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: 29vh;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 .playFairItalic {
     font-size: 2.4rem;
-    font-style: italic;
-    margin-bottom: 1.5rem;
-    font-family: 'playfair_displayitalic';
-    padding-left: 3rem;
-    padding-right: 3rem;
+    font-family: 'playfair_displayitalic',serif;
+    background-color: white;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 1rem;
 }
-.heavy {
-    font-style: normal;
-    font-weight: bold;
+
+.aboutAloha {
+    font-size: 1.25rem;
+    font-family: 'ralewaylight',sans-serif;
+    width: 47rem;
+    text-align: center;
+    margin-bottom: 2rem;
 }
+
 hr {
-	display: block;
+    display: block;
     height: 1px;
     border: 0;
     border-top: 1px solid #d7d7d7;
@@ -257,108 +279,195 @@ hr {
     padding: 0; 
 }
 
+/*----------------shopCategories--------------------*/
+.shopCategories {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+}
+.shopCategories p {
+    color: white;
+    font-family: 'ralewaymedium', sans-serif;
+    font-size: 2rem;
+    text-shadow: 2px 2px 6px #000;
+
+}
+
+.shopCategories div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+}
+.mens {
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("assets/images/mens-category.jpg");
+    background: linear-gradient(to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("assets/images/mens-category.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    height: 50vw;
+}
+.trends {   
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("assets/images/trends-category.jpg");   
+    background: linear-gradient(to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("assets/images/trends-category.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    height:50vw;
+
+}
+.glasses {
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("assets/images/glasses-category.jpg");
+    background: linear-gradient(to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("assets/images/glasses-category.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+}
+.sale {
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("assets/images/sale-category.jpg");
+    background: linear-gradient(to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("assets/images/sale-category.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    height:50vw;
+}
+.bags {
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("assets/images/bags-category.jpg");
+    background: linear-gradient(to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("assets/images/bags-category.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    -ms-flex-preferred-size:50%;
+        flex-basis:50%;
+}
+.womens {
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("assets/images/womens-category.jpg");
+    background: linear-gradient(to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("assets/images/womens-category.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    height: 50vw;
+}
 /*----------------mostLovedProducts----------------*/
 
 .mostLovedProducts {
-	margin-top:2.5rem;
+    margin-top:3.5rem;
+    margin-bottom:3rem;
 }
 
 .mostLovedProducts div {
-	display: inline-block;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
-
-.product{
-	text-align: center;
-	width: 24%;
-	float:left;
-	list-style:none;
-	margin-bottom: 2rem;
+.productList {
+    list-style: none;
+    text-align: center;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top:3rem;
 }
-
 .itemAndPrice {
-	color: #969696;
+    color: #969696;
     font-size: 0.7rem;
     margin-bottom: 1px;
     margin-top: 1px;
-    font-family: 'ralewaymedium';
+    font-family: 'ralewaymedium',sans-serif;
+    text-transform: uppercase;
 }
 .itemName {
-	color: #e2574c;
-    font-family: 'playfair_displayregular';
+    color: #e2574c;
+    font-family: 'playfair_displayregular', serif;
 
 }
 
 /*----------------signUpSection----------------*/
 .signUpSection {
-    background: url(assets/images/wave-bkgd.jpg) no-repeat center bottom;
-    height: 18rem;
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.25) 100% ),url(assets/images/wave-bkgd.jpg) no-repeat center bottom;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.25) 100% ),url(assets/images/wave-bkgd.jpg) no-repeat center bottom;
     color: white;
-    height: 21rem;
-    width: 78rem;
     margin-bottom: 8px;
 }
 
+.context {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: column wrap;
+        flex-flow: column wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
 .signUpSection h2 {
-    display: inline-block;
     font-size: 2.4rem;
     font-style: italic;
-    font-family: 'playfair_displayitalic';
+    height: 5rem;
+    font-family: 'playfair_displayitalic',serif;
     text-shadow: 2px 2px 6px #000;
-    transform: translateY(-1rem);
-    position: absolute;
-    left: 28rem;
-}
-
-.newsLetter {
-    position: absolute;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    height: 13rem;
-    width: 52rem;
-    margin-left: 10rem;
-    margin-right: 16rem;
-}
-
-.formAlignment {
-    display: table-cell;
+    -ms-flex-line-pack: center;
+        align-content: center;
     text-align: center;
-    vertical-align: middle;
-    position: absolute;
-    left: 21rem;
-    width: 30rem;
-    height: 4rem;
-    transform: translateY(9.5rem);
-    margin-left: 2rem;
-    margin-right: 2rem;}
+    -ms-flex-preferred-size:100%;
+        flex-basis:100%;
+    -webkit-transform: translateY(1rem);
+            transform: translateY(1rem);
+}
 .wrapperForm {
     padding-top:2rem;
     padding-bottom:2.5rem;
     text-align:center;
 
 }
-
+.formAlignment {
+    height: 4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 5rem;
+    position: relative;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-transform: translateY(2rem);
+            transform: translateY(2rem);
+}
 .signUpSection p {
-    font-family: 'ralewaymedium';
-    display: inline-block;
-    position: absolute;
-    right: 20rem;
-    width: 39rem;
-    margin: 0 auto;
-    transform: translateY(4rem);
+    font-family: 'ralewaymedium',sans-serif;
+    width: 25rem;
     text-align: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 1rem;
 }
 .email {
-    width: 28rem;
+    width: 23rem;
     height: 3.0rem;
     border-radius: 7rem;
     border: none;
     padding-left: 1.4rem;
+    position: relative;
 }
 
 .subscribeButton {
-    position: absolute;
-    transform: translateY(.15rem);
-    left: 21.46rem;
     border-radius: 4rem;
     height: 2.8rem;
     width: 8rem;
@@ -366,7 +475,9 @@ hr {
     border: none;
     color: white;
     font-size: 1.1rem;
-
+    right: 4px;
+    top: 3px;
+    position: absolute;
 
 }
 /*----------------siteFooter----------------*/
@@ -379,16 +490,26 @@ hr {
     padding-left: 2rem;
     padding-right: 4rem;
     height: 10rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 
 
  }
 
 .colophon {
-    float: left;
-    position: absolute;
     color: white;
     font-size: .9rem;
-    font-family: 'playfair_displayregular';
+    font-family: 'playfair_displayregular', serif;
+    height: 11rem;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    text-align: center;
 }
 
 .contact a {
@@ -397,24 +518,25 @@ hr {
 }
 
 .netWorkList {
-    position: relative;
-    float: right;
     font-size: 1.1rem;
-    font-family: 'ralewaymedium';
-}
-
-.networkName {
-    padding-left:1rem;
-    display:inline-block;
-
-
+    font-family: 'ralewaymedium', sans-serif;
+    width: 9rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 1.5rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .networkName a {
-    padding-left:1rem;
-    text-decoration:none;
-    color:white;
+    display:none;
 }
+.networkName i {
+    display:inline-block;
+}
+
 .copyRight {
     padding-bottom: 1rem;
 
@@ -437,4 +559,122 @@ hr {
     margin:0 auto;
     width:100%;
 }
+/*flickity*/
 
+.carousel-cell {
+  width: 100%; /* full width */
+  height: 29rem; /* height of carousel */
+  margin-right: 10px;
+}
+
+.flickity-page-dots {
+ bottom:-2px ! important;
+}
+
+/*600px Tablet Design****************************************/
+
+@media only screen and (min-width: 600px) {
+   
+/*header***********************************/
+header {
+    height:5rem;
+}
+.navBar {
+    width: 17.3rem;
+    border: none;
+    padding-right: 4.2rem;
+}
+.navBar a {
+    text-decoration: none;
+    color: #e2574c;
+}
+
+.logo {
+    padding-left: 2rem;
+}
+
+.cart {
+    padding-right: 15px;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+}
+/*categories***********************************/
+.mens {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    height: 25vw;
+}
+.trends {
+    -ms-flex-preferred-size:25%;
+        flex-basis:25%;
+    height:25vw;
+}
+.glasses {
+    -ms-flex-preferred-size:25%;
+        flex-basis:25%;
+}
+.sale {
+    -ms-flex-preferred-size:25%;
+        flex-basis:25%;
+    height:25vw;
+}
+.bags {
+    -ms-flex-preferred-size:25%;
+        flex-basis:25%;
+}
+.womens {
+    -ms-flex-preferred-size:50%;
+        flex-basis:50%;
+    height:25vw;
+}
+
+/*product slider****************************/
+.carousel-cell {
+    width:50%;
+}
+
+/*footer*********************************/
+.siteFooter {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+.colophon {
+    text-align:left;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+}
+.netWorkList {
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+        -ms-flex-direction:column;
+            flex-direction:column;
+    margin:0;
+}
+.networkName a {
+    padding-left:1rem;
+    text-decoration:none;
+    color:white;
+    display: inline-block;
+    text-align:left;
+}
+}
+/*1240px Desktop Design****************************************/
+
+@media only screen and (min-width: 1240px) {
+/*header*/
+.logo {
+    max-width: 10rem;
+}
+.cart {
+    width:4rem;
+}
+
+.carousel-cell {
+    width:24%;
+}
+.signUpSection p {
+    width:37rem;
+}
+}

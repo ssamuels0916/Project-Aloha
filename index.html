@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html>
 <html lang=en>
 	<head>
 	    <title>Djordje's Aloha Webpage</title>
 	    <meta charset=utf-8>
+	    <meta name="viewport" content="width=device-width">
 		<link rel="stylesheet" href="reset.css">
 		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://unpkg.com/flickity@2.0/dist/flickity.css">
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 	</head>
 
@@ -17,11 +18,16 @@
 
 	<header class="siteHeader">
 		<div class="logo">
-			<img src="assets/images/aloha-logo.svg">
+			<img src="assets/images/aloha-logo.svg" alt="Company Logo">
+		</div>
+		<div class="navBar">
+			<p><a href = "#about">About</a></p>
+			<p><a href = "#shop">Shop</a></p>
+			<p><a href = "#features">Features</a></p>
+			<p><a href = "#updates">Updates</a></p>
 		</div>
 		<div class="cart">
-			<img src="assets/images/cart-icon.svg">
-		</div>
+			<img src="assets/images/cart-icon.svg" alt="Shopping Cart Icon">
 		</div>
 	</header>
 
@@ -35,57 +41,105 @@
 	</section>
 
 <!--about*****************************************************-->
-	<section class="about">
-		<div class="aboutText container">
+		<section class="aboutText" id="about">
 			<h2 class="playFairItalic">
 			Hand-Crafted
 			<span class="heavy">Styles</span>
 			</h2>
 			<p class="aboutAloha">Aloha Apparel Co. sells only the finest ready-to-travel clothing. Browse our current selection of products or sign-up for updates below.</p>
-		</div>
 	</section>
-	<hr></hr>
+
+<!---Shop*************************************-->
+   <section class="shopCategories" id="shop">
+   	 
+   	   <div class="mens">
+   	   <p>Men's</p>
+   	   </div>
+   	   <div class="trends">
+   	   <p>Trends</p>
+   	   </div>
+   	   <div class="glasses">
+   	   <p>Glasses</p>
+   	   </div>
+   	   <div class="sale">
+   	   <p>Sale</p>
+   	   </div>
+   	   <div class="bags">
+   	   <p>Bags</p>
+   	   </div>
+   	   <div class="womens">
+   	   <p>Womens</p>
+   	   </div>
+
+
+   </section>
 
 <!--mostLovedProducts*****************************************************-->
 
-	<section class="mostLovedProducts">
+
+	<section class="mostLovedProducts" id="features">
 		<div class="container">
 			<h2 class="playFairItalic">
 			Most-Loved
 			<span class="heavy">Products</span>
 			</h2>
-		<ul>
-			<li class="product">
-				<img src="assets/images/stretch-knit-dress.jpg">
-					<p class="itemAndPrice">DRESSES</p>
+		<ul class="productList main-carousel" data-flickity='{ "cellAlign": "left", "contain": true, "autoPlay":true, "prevNextButtons":false}'>
+			<li class="product carousel-cell">
+				<img src="assets/images/stretch-knit-dress.jpg" alt="Stretch Knit Dress">
+					<p class="itemAndPrice">Dresses</p>
 					<p class="itemName">Stretch Knit Dress</p>
 					<p class="itemAndPrice">$169.00</p>
 			</li>
-			<li class="product">
-				<img src="assets/images/cotton-blue-shirt.jpg">
-					<p class="itemAndPrice">SHIRTS<p>
+			<li class="product carousel-cell">
+				<img src="assets/images/cotton-blue-shirt.jpg" alt="Cotton Blue Shirt">
+					<p class="itemAndPrice">Shirts<p>
 					<p class="itemName">Cotton Blue Shirt</p>
 					<p class="itemAndPrice">$89.00</p>
 			</li>
-			<li class="product">
-				<img src="assets/images/checked-stretch-dress.jpg">
-					<p class="itemAndPrice">DRESSES<p>
+			<li class="product carousel-cell">
+				<img src="assets/images/checked-stretch-dress.jpg" alt="Checked Stretch Dress">
+					<p class="itemAndPrice">Dresses<p>
 					<p class="itemName">Checked Stretch Dress</p>
 					<p class="itemAndPrice">$129.00</p>
 			</li>
-			<li class="product">
-				<img src="assets/images/blue-hipster-backpack.jpg">
-					<p class="itemAndPrice">BAGS</p>
+			<li class="product carousel-cell">
+				<img src="assets/images/blue-hipster-backpack.jpg" alt="Blue Hipster Backpack">
+					<p class="itemAndPrice">Bags</p>
 					<p class="itemName">Blue Hipster Backpack</p>
 					<p class="itemAndPrice">$69.00</p>
+			</li>
+			<li class="product carousel-cell">
+				<img src="assets/images/demin-overall-shorts.jpg" alt="Denim Overall Shorts">
+					<p class="itemAndPrice">Denim</p>
+					<p class="itemName">Denim Overall Shorts</p>
+					<p class="itemAndPrice">$89.00</p>
+			</li>
+			<li class="product carousel-cell">
+				<img src="assets/images/pink-dotted-dress.jpg" alt="Pink Dotted Dress">
+					<p class="itemAndPrice">Dresses</p>
+					<p class="itemName">Pink Dotted Dress</p>
+					<p class="itemAndPrice">$99.00</p>
+			</li>
+			<li class="product carousel-cell">
+				<img src="assets/images/blue-silk-dress.jpg" alt="Blue Silk Dress">
+					<p class="itemAndPrice">Dresses</p>
+					<p class="itemName">Blue Silk Dress</p>
+					<p class="itemAndPrice">$119.00</p>
+			</li>
+			<li class="product carousel-cell">
+				<img src="assets/images/cotton-yellow-tshirt.jpg" alt="Cotton Yellow T-Shirt">
+					<p class="itemAndPrice">Shirts</p>
+					<p class="itemName">Cotton Yellow Tshirt</p>
+					<p class="itemAndPrice">$39.00</p>
 			</li>
 		</ul>
 		</div>
 	</section>
 
 <!--signUpSection*****************************************************-->
-	<section class="signUpSection">
-		<div class="newsLetter container">
+	<section class="signUpSection" id="updates">
+		<div>
+		  <div class ="context">
 			<h2 class="signUpForUpdates">Sign-up for
 			<span class="heavy">Updates</span>
 			</h2>
@@ -94,7 +148,8 @@
 			<input class="email" name="your_email" placeholder="Your Email" style="font-size:1rem">
 			<button class="subscribeButton">Subscribe</button>
 		</form>
-	    </div>
+		</div>
+	   </div>
 	</section>
 <!--siteFooter*****************************************************-->	
 	<footer class="siteFooter">
@@ -117,30 +172,29 @@
 		 <ul class="netWorkList">
 		 	<li>
 		 		<i class="fa fa-facebook" aria-hidden="true"></i>
-		 		<span class="networkName"><a href="www.facebook.com">Facebook</a></span>
+		 		<span class="networkName"><a href="www.facebook.com"> Facebook</a></span>
 		 	</li>
 		 	<li>
 		 		<i class="fa fa-twitter" aria-hidden="true"></i>
-		 		<span class="networkName"><a href="www.twitter.com">Twitter</a></span>
+		 		<span class="networkName"><a href="www.twitter.com"> Twitter</a></span>
 		 	</li>
 		 	<li>
 		 		<i class="fa fa-instagram" aria-hidden="true"></i>
-		 		<span class="networkName"><a href="www.instagram.com">Instagram</a></span>
+		 		<span class="networkName"><a href="www.instagram.com"> Instagram</a></span>
 		 	</li>
 		 	<li>
 		 		<i class="fa fa-pinterest" aria-hidden="true"></i>
-		 		<span class="networkName"><a href="www.pinterest.com">Pintrest</a></span>
+		 		<span class="networkName"><a href="www.pinterest.com"> Pintrest</a></span>
 		 	</li>
 		 	<li>
 		 		<i class="fa fa-google-plus" aria-hidden="true"></i>
-		 		<span class="networkName"><a href="plus.google.com">Google+</a></span>
+		 		<span class="networkName"><a href="plus.google.com"> Google+</a></span>
 		 	</li>
 		 </ul>
-		</div>
 	</footer>
-
-	
-
 <!--endBody*****************************************************-->	
+   <script src="js/jquery-3.1.1.js"></script>
+   <script src="js/script.js"></script>
+   <script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.js"></script>
 	</body>
 </html>
