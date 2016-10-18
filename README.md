@@ -5,11 +5,11 @@
 For our first project at Red Academy we built the homepage of an e-commerce website, Aloha Apparel, using HTML and CSS. 
 
 ## Languages and Tools Used
-	* HTML
-	* CSS (including CSS reset styles, flexbox, and media queries)
-	*jQuery (smooth scrolling, bxSlider, DOM navigation, alert-box display)
+	* HTML5
+	* CSS3 (CSS reset styles, flexbox, and media queries)
+	* jQuery (smooth scrolling, bxSlider, DOM navigation, alert-box display)
 	* Git and Github 
-	*Mobile first approach to coding & design(RWD)
+	* Mobile first approach to coding & design(RWD)
 	
 
 ## What did I learn?
