@@ -2,7 +2,7 @@
 
 ## Summary
 
-For our first project at Red Academy we built the homepage of an e-commerce website, Aloha Apparel, using HTML and CSS. 
+For our first project at Red Academy we built the homepage of an e-commerce website, Aloha Apparel, using HTML5, CSS3, and jQuery. 
 
 ## Languages and Tools Used
 	* HTML5
