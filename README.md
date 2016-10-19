@@ -14,4 +14,4 @@ For our first project at Red Academy we built the homepage of an e-commerce webs
 
 ## What did I learn?
 
-For this project I was able to learn and hone my HTML, CSS, and jQuery skills. Though at first using these mark-ups and languages proved to be a bit challenging, with time and plenty of practice I was able to improve upon what I've learned, to the point where I am able to say that I am very confident in my skills with these languages. 
+For this project I was able to learn and hone my HTML, CSS, and jQuery skills. At first using these mark-ups and languages proved to be a bit of a challenge. However,  with time and plenty of practice I was able to improve upon what I've learned, to the point where I am able to say that I am very confident in my skills with these languages. 
